@@ -141,5 +141,107 @@
 }
 
 
+.login-screen-input > form > input{
+
+    padding: 14px;
+
+    outline-width: 0;
+
+
+    /* height: 46px; */
+    border: none;
+
+    width: 30%;
+    max-width: 800px;
+}
+
+
+
+.login-screen-input button{
+    padding: 14px 18px;
+
+    font-size: 1rem;
+    background-color: red;
+    border: none;
+    color: white;
+
+
+
+}
+
+
+
+
+.signup-screen{
+
+
+    max-width: 300px;
+
+    padding: 60px 80px;
+    margin: 0 auto;
+    border: none;
+    background-color: black;
+}
+
+.signup-screen > form{
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.signup-screen > form > input{
+
+    padding: 6px 14px;
+
+    outline-width: 0;
+
+    
+
+    height: 40px;
+
+    border: none;
+
+
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.signup-screen > form > button{
+
+
+
+    padding: 15px 22px;
+
+    font-size: 1rem;
+
+
+
+    background-color: red;
+    border: none;
+
+
+    cursor: pointer;
+
+    margin-top: 30px;
+
+    border-radius: 8px;
+
+
+
+    color: white;
+}
+
+
+.sign-up-p{
+    color: gray;
+    padding: 8px;
+}
+
+
 
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import HomeScreen from './Components/HomeScreen';
 
@@ -13,9 +13,29 @@ import {
 
 import LoginScreen from './Components/LoginScreen';
 import Navbar from './Components/Navbar';
+
+
+import { auth } from './firebase';
+
 function App() {
 
   const user = null;
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+
+
+      if(userAuth){
+
+        console.log(userAuth);
+      }
+      else{
+
+      }
+    })
+    return unsubscribe;
+
+  }, [] );
 
   return (
 
@@ -27,9 +47,11 @@ function App() {
 
 
 
-    <Router>
-    { !user ? (
 
+
+    <Router>
+
+    { !user ? (
 
 
 
