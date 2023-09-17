@@ -1,15 +1,17 @@
 import React from 'react'
 import { AppBar, Container, Toolbar, Button, Box } from '@mui/material'
-
+import { useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
 
+  const navigate = useNavigate();
+
   return (
 
+
+
     <div>
-
-
 
     <Box sx={{flexGrow: '1'}} >
 
@@ -19,7 +21,7 @@ const Navbar = () => {
 
     <Toolbar>
 
-    <img src='https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png' height= '80px' alt='netflix logo' />
+    <img src='https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png' height= '80px' alt='netflix logo' onClick={() => navigate('/')} />
 
     <div style={{display: 'flex', justifyContent: 'right', flexGrow: '1' }} >
     <Button variant="contained" sx={{backgroundColor: 'red'}} >Sign In</Button>

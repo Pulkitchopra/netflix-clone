@@ -243,5 +243,94 @@
 }
 
 
+.profile-screen{
+
+    height: 100vh;
 
 
+    color: white;
+}
+
+.profile-screen-box{
+    display: flex;
+
+
+    flex-direction: column;
+
+    width: 50%;
+    border: none;
+
+    margin: 0 auto;
+    padding: 0%;
+
+
+
+    max-width: 800px;
+
+}
+
+
+
+
+
+
+
+.profile-screen-info{
+
+    display: flex;
+}
+
+.profile-screen-box > h1{
+    font-size: 2rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile-screen-details{
+
+    color: white;
+
+    flex: 1;
+
+    text-align: center;
+
+}
+
+.profile-screen-details > h4{
+
+    background-color: gray;
+
+    padding: 15px;
+}
+
+
+.profile-screen-details button{
+
+    padding: 10px 20px;
+
+    font-size: 1rem;
+
+    margin-top: 8%;
+
+    border: none;
+
+    background-color: red;
+    
+    width: 100%;
+
+    color: white;
+
+    cursor: pointer;
+
+}

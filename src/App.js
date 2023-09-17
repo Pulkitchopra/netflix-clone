@@ -13,57 +13,75 @@ import {
 
 import LoginScreen from './Components/LoginScreen';
 import Navbar from './Components/Navbar';
-
-
 import { auth } from './firebase';
 
-function App() {
+import { useDispatch, useSelector } from 'react-redux';
 
-  const user = null;
+import {login, logout, selectUser } from './features/counter/userSlice';
+
+import UserProfile from './Components/UserProfile';
+
+function App() {
+  const user = useSelector(selectUser);
+
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
 
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
 
       if(userAuth){
 
-        console.log(userAuth);
-      }
-      else{
+        dispatch(
 
+          login({
+
+            uid: userAuth.uid,
+
+            email: userAuth.email
+          })
+        )
+      }
+
+
+
+
+
+
+      else{
+        dispatch(logout());
       }
     })
+
     return unsubscribe;
+  }, [dispatch] );
 
-  }, [] );
-
-  return (
-
+  return ( 
     <div>
 
+    <Router>
 
     <Navbar/>
 
-
-
-
-
-
-    <Router>
 
     { !user ? (
 
 
 
+
+
+
       <LoginScreen/>
+
 
     ) : (
 
       <Routes>
 
+      <Route exact path='/profile' element = { <UserProfile/> } />
+
       <Route exact path='/' element = { <HomeScreen/> } />
-
-
       </Routes>
     )}
     </Router>
