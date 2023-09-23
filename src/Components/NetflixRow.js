@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-
+import YouTube from 'react-youtube';
 import axios from 'axios';
 
 
@@ -23,9 +23,21 @@ const NetflixRow = ( { title, fetchUrl, isLargeRow = false } ) => {
 
     }, [fetchUrl]);
 
-    console.log(movies);
-    
 
+
+
+
+    const opts = {
+      
+      height: '400',
+
+      width: '100%',
+
+      playerVars: {
+
+        autoplay: 1
+      }
+    }
 
   return (
 
@@ -35,15 +47,21 @@ const NetflixRow = ( { title, fetchUrl, isLargeRow = false } ) => {
     
     <div className='row-posters'>
 
+
+
     { movies.map( movie => (
 
       <img src={ `${ base_url }${ isLargeRow ? movie.poster_path : movie.backdrop_path }` } alt= {movie.name} 
       key={movie.id} className= { `row-images ${isLargeRow && 'large-row-images' }` }
        />
     ) ) }
-      
-    
+
+
     </div>
+
+
+
+    <YouTube videoId='trailerUrl' opts={opts}  />
     </div>
 
   )
@@ -52,7 +70,6 @@ const NetflixRow = ( { title, fetchUrl, isLargeRow = false } ) => {
 
 
 }
-
 
 
 export default NetflixRow
