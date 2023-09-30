@@ -27,20 +27,20 @@ const UserProfile = () => {
 
     <h4>{user.email}</h4>
 
+
+
     <div className='profile-screen-netflix-plans'>
 
     <h4>Netflix Plans</h4>
 
+    <button>Subscribe</button>
+
     <button onClick={() => auth.signOut()}>LogOut</button>
 
     </div>
-
     </div>
-
     </div>
-
-    </div>
-      
+    </div> 
     </div>
 
   )
