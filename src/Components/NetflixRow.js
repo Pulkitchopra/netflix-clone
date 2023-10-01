@@ -30,7 +30,7 @@ const NetflixRow = ( { title, fetchUrl, isLargeRow = false } ) => {
     useEffect(() => {
 
       fetchData();
-
+      // eslint-disable-next-line
     }, [fetchUrl]);
 
     const opts = {
