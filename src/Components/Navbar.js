@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Container, Toolbar, Button, Box } from '@mui/material'
+import { AppBar, Container, Toolbar, Button, Box, Avatar } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
 
@@ -37,7 +37,10 @@ const Navbar = () => {
 
     <div style={{display: 'flex', justifyContent: 'right', flexGrow: '1' }} >
 
-    <Button variant="contained" sx={{backgroundColor: 'red'}} onClick={ () => navigate('/profile') } > {user ? 'User' : 'Sign In' } </Button>
+   {user ? <Avatar onClick={ () => navigate('/profile') } sx = {{bgcolor: 'blue'}} >P</Avatar> :
+   <Button variant="contained" sx={{backgroundColor: 'red'}} onClick={ () => navigate('/profile') } > Sign In </Button> }
+
+    
     </div>
 
     </Toolbar>

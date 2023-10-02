@@ -257,7 +257,7 @@
 
     flex-direction: column;
 
-    width: 50%;
+    width: 38%;
     border: none;
 
     margin: 0 auto;
@@ -315,7 +315,7 @@
 }
 
 
-.profile-screen-details button{
+.profile-screen-details .logout-button{
 
     padding: 10px 20px;
 
@@ -333,4 +333,28 @@
 
     cursor: pointer;
 
+}
+
+.subscription {
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.netflix-subscription-button{
+    padding: 10px 20px;
+
+    font-size: 1rem;
+
+    margin-top: 16px;
+
+    border: none;
+
+    background-color: red;
+
+    color: white;
+
+    cursor: pointer;
 }

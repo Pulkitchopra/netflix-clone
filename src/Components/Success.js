@@ -1,10 +1,13 @@
 import React from 'react'
 
 const Success = () => {
+
   return (
     <div>
-      Success
+
+      <button>Payment</button>
     </div>
+    
   )
 }
 
