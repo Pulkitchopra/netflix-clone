@@ -31,13 +31,13 @@ const Navbar = () => {
      
      <Container>
 
-    <Toolbar>
+    <Toolbar sx={{cursor: 'pointer'}} >
 
     <img src='https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png' height= '80px' alt='netflix logo' onClick={() => navigate('/')} />
 
     <div style={{display: 'flex', justifyContent: 'right', flexGrow: '1' }} >
 
-   {user ? <Avatar onClick={ () => navigate('/profile') } sx = {{bgcolor: 'blue'}} >P</Avatar> :
+   {user ? <Avatar onClick={ () => navigate('/profile') } sx = {{bgcolor: 'blue'}} > {user.email.substr(0, 1).toUpperCase()} </Avatar> :
    <Button variant="contained" sx={{backgroundColor: 'red'}} onClick={ () => navigate('/profile') } > Sign In </Button> }
 
     
