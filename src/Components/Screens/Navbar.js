@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 import {useSelector} from 'react-redux';
 
-import {selectUser} from '../features/counter/userSlice';
+import {selectUser} from '../../features/counter/userSlice';
 
 const Navbar = () => {
 

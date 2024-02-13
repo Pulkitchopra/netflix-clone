@@ -1,18 +1,12 @@
 import React from 'react'
-
 import NetflixRow from './NetflixRow'
 import NetflixBanner from './NetflixBanner'
-import data from '../NetflixData';
+import data from '../../data/NetflixData';
 
-const HomeScreen = () => {
-   
+const HomeScreen = () => {  
   return (
 
     <div>
-
-
-
-
     <NetflixBanner/>
 
     <NetflixRow title = 'Netflix Originals' fetchUrl = { data.fetchNetflixOriginals }  />
@@ -23,29 +17,16 @@ const HomeScreen = () => {
 
     <NetflixRow title = 'Action Movies' fetchUrl = { data.fetchActionMovies }  />
 
-
-
-
-
-
     <NetflixRow title = 'Comedy Movies' fetchUrl = { data.fetchComedyMovies }  />
+
     <NetflixRow title = 'Horror Movies' fetchUrl = { data.fetchHorrorMovies }  />
+
     <NetflixRow title = 'Romance Movies' fetchUrl = { data.fetchRomanceMovies }  />
+
     <NetflixRow title = 'Documentaries' fetchUrl = { data.fetchDocumentaries }  />
-
-
-
-
-
-
-
-
-
     </div>
 
   )
 }
-
-
 
 export default HomeScreen

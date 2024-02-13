@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import HomeScreen from './Components/HomeScreen';
+import HomeScreen from './Components/Screens/HomeScreen';
 
 
 import {
@@ -11,17 +11,17 @@ import {
 } from "react-router-dom";
 
 
-import LoginScreen from './Components/LoginScreen';
-import Navbar from './Components/Navbar';
+import LoginScreen from './Components/Authentication/LoginScreen';
+import Navbar from './Components/Screens/Navbar';
 import { auth } from './firebase';
 
 import { useDispatch, useSelector } from 'react-redux';
 
 import {login, logout, selectUser } from './features/counter/userSlice';
 
-import UserProfile from './Components/UserProfile';
-import Cancel from './Components/Cancel';
-import Success from './Components/Success';
+// import UserProfile from './Components/UserProfile';
+// import Cancel from './Components/Payment/Cancel';
+// import Success from './Components/Payment/Success';
 function App() {
 
 
@@ -81,12 +81,12 @@ function App() {
 
       <Routes>
 
-      <Route exact path='/profile' element = { <UserProfile/> } />
+      {/* <Route exact path='/profile' element = { <UserProfile/> } /> */}
 
       <Route exact path='/' element = { <HomeScreen/> } />
 
-      <Route exact path='/success' element = {<Success/> } />
-      <Route exact path='/cancel' element = { <Cancel/> } />
+      {/* <Route exact path='/success' element = {<Success/> } /> */}
+      {/* <Route exact path='/cancel' element = { <Cancel/> } /> */}
       </Routes>
     )}
     </Router>
