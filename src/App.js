@@ -19,9 +19,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import {login, logout, selectUser } from './features/counter/userSlice';
 
-// import UserProfile from './Components/UserProfile';
-// import Cancel from './Components/Payment/Cancel';
-// import Success from './Components/Payment/Success';
+import UserProfile from './Components/UserProfile';
+import Cancel from './Components/Payment/Cancel';
+import Success from './Components/Payment/Success';
 function App() {
 
 
@@ -81,12 +81,12 @@ function App() {
 
       <Routes>
 
-      {/* <Route exact path='/profile' element = { <UserProfile/> } /> */}
+      <Route exact path='/profile' element = { <UserProfile/> } />
 
       <Route exact path='/' element = { <HomeScreen/> } />
 
-      {/* <Route exact path='/success' element = {<Success/> } /> */}
-      {/* <Route exact path='/cancel' element = { <Cancel/> } /> */}
+      <Route exact path='/success' element = {<Success/> } />
+      <Route exact path='/cancel' element = { <Cancel/> } />
       </Routes>
     )}
     </Router>

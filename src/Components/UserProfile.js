@@ -14,11 +14,6 @@ const getStripe = () => {
   return stripePromise;
 }
 
-
-
-
-
-
 const product = [
   {
     id: 1,
